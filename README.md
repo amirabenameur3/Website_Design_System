@@ -1,6 +1,8 @@
 # Website Design System
 
+[![Live Demo](https://img.shields.io/badge/Live-Demo-green?style=for-the-badge&logo=github)](https://amirabenameur3.github.io/Website_Design_System/)
 
+![Tea Cozy Preview](docs/Webpage_design_preview.png)
 
 ---
 
