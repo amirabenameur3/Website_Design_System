@@ -1,21 +1,5 @@
 /* Universal Styles */
 
-html {
-    font-family: "Georgia", serif;
-    font-size: 16px;
-}
-
-body {
-    background: linear-gradient(135deg, #0f172a, #1e293b);
-    color: #f8fafc;
-    margin: 0;
-}
-
-.main-content {
-    position: relative;
-    padding: 1rem;
-}
-
 * {
     box-sizing: border-box;
 }
@@ -41,12 +25,26 @@ body {
   --color-palette12: #fa8072;
 }
 
+html {
+    font-family: "Georgia", serif;
+    font-size: 16px;
+}
+
+body {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.main-content {
+    padding: 0 1rem;
+}
+
 /* Header */
 
 header {
-  position: relative;
   width: 100%;
-  border-bottom: solid 1px var(--text-primary);
+  border-bottom: solid 1px var(--border-card-color);
 }
 
 header .content {
@@ -60,7 +58,6 @@ header .content {
 }
 
 header .main-title {
-    padding: 0;
     flex: 1 1 260px;
 }
 
@@ -89,53 +86,64 @@ nav li {
 
 nav a {
     display: inline-block;
+    padding: 0.4rem 0.75rem;
+    border-radius: 0.4rem;
     font-size: 1.1rem;
     color: var(--text-secondary);
     text-decoration: none;
-    padding: 0.4rem 0.75rem;
-    border-radius: 0.4rem;
     transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
 }
 
 nav a:hover {
     color: var(--accent-color);
-    background-color: rgba(255, 255, 255, 0.06);
-    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.06);    
     transform: translateY(-1px);
 }
 
 /* Main Content */
 
-/* color */
+/* Shared Section Styles */
 
-.colors {
+.colors, .fonts, .text-styles, .buttons {
     display: flex;
     flex-direction: column;
     padding: 1rem;
-    border: 1px solid var(--text-primary);
+    border: 1px solid var(--border-card-color);
     border-radius: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.02);
+    margin-top: 2rem;
 }
 
-.colors h2 {
+.colors h2, .fonts h2, .text-styles h2, .buttons h2 {
     margin: 1rem;
     color: var(--text-primary);
 }
+
+/* Color section */
 
 .color-palette {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 2rem;
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin: 1.5rem 0;
 }
 
 .color-item {
-    padding: 1rem;
-    border-radius: 0.5rem;
-    color: var(--text-primary);
-    text-align: center;
     min-height: 170px;
+    padding: 1rem;
     border: 1px solid var(--border-card-color);
+    border-radius: 0.5rem;
+    text-align: center;
+    color: var(--text-primary);
+}
+
+.color-item h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.color-item p {
+    margin: 0.4rem 0;
 }
 
 .dark-navy {
@@ -191,34 +199,24 @@ nav a:hover {
     background-color: var(--color-palette12);
 }
 
-/* Fonts */
-
-.fonts {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    border: 1px solid var(--text-primary);
-    border-radius: 0.5rem;
-    margin-top: 2rem;
-}
-
-.fonts h2 {
-    margin: 1rem;
-    color: var(--text-primary);
-}
+/* Fonts section */
 
 .font-samples {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 2rem;
+    margin: 1.5rem 0;
 }
 
 .font-item {
+    min-height: 170px;
     padding: 1rem;
-    color: var(--text-primary);
     text-align: left;
     line-height: 1.5;
-    min-height: 170px;
+    color: var(--text-primary);
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-card-color);
+    border-radius: 0.5rem;
 }
 
 .font-item h3 {
@@ -229,11 +227,12 @@ nav a:hover {
 
 .author a {
     color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 .font-item a:hover {
-    color: var(--accent-color);
-    transition: font-size 0.3s ease; 
+    color: var(--accent-color); 
 }
 
 .inter, .inter a {
@@ -283,36 +282,27 @@ nav a:hover {
 
 /* Text Styles */
 
-.text-styles {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    border: 1px solid var(--text-primary);
-    border-radius: 0.5rem;
-    margin-top: 2rem;
-}
-
-.text-styles h2 {
-    margin: 1rem;
-    color: var(--text-primary);
-}
-
 .text-style {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 2rem;
+    margin: 1.5rem 0;
 }
 
 .text-style-item {
+    min-height: 170px;
     padding: 1rem;
-    color: var(--text-primary);
     text-align: left;
     line-height: 1.5;
-    min-height: 170px;
+    color: var(--text-primary);
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-card-color);
+    border-radius: 0.5rem; 
 }
 
 .text-style-item ul {
     margin-bottom: 0;
+    padding-left: 1.2rem;
 }
 
 .text-style-item li {
@@ -327,42 +317,26 @@ nav a:hover {
 
 /* Buttons */
 
-.buttons {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    border: 1px solid var(--text-primary);
-    border-radius: 0.5rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    
-}
-
-.buttons h2 {
-    margin: 1rem;
-    color: var(--text-primary);
-}
-
 .button-samples {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
-    margin: 1rem 0;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin: 2rem 0;
 }
 
 .classic-button, .flat-button, .skeuomorphism-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-height: 56px;
     width: min(100%, 220px);
+    min-height: 56px;
     padding: 1rem 2rem;
     border-radius: 0.25rem;
+    font-family: "Inter", serif;
     font-size: 1.125rem;
-    font-family: "Georgia", serif;
+    font-weight: 500;
+    letter-spacing: 0.03em;
     text-align: center;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
@@ -370,14 +344,31 @@ nav a:hover {
 
 /* Classic Button */
 
-.classic-button:hover {
+.classic-button {
     background-color: var(--accent-color);
-    color: var(--text-primary);
-    border-color: var(--accent-color);
+    color: var(--text-dark);
+    border: none;
+}
+
+.classic-button:hover {
+    background-color: #0ea5e9;
     transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.3);
 }
 
 /* Flat Button */
+
+.flat-button {
+    background-color: transparent;
+    color: var(--text-primary);
+    border: 1px solid var(--border-card-color);
+}
+
+.flat-button:hover {
+    background-color: rgba(255,255,255,0.06);
+    color: var(--accent-color);
+    transform: translateY(-2px);
+}
 
 .flat-button span {
     position: relative;
@@ -388,16 +379,9 @@ nav a:hover {
 .flat-button span:after {
     content: "\00bb";
     position: absolute;
-    opacity: 0;
     right: -1.25rem;
+    opacity: 0;
     transition: opacity 0.3s ease, right 0.3s ease;
-}
-
-.flat-button:hover {
-    background-color: var(--accent-color);
-    color: var(--text-primary);
-    border-color: var(--accent-color);
-    transition: translateY(-2px);
 }
 
 .flat-button:hover span {
@@ -405,8 +389,8 @@ nav a:hover {
 }
 
 .flat-button:hover span:after {
-    opacity: 1;
     right: -1rem;
+    opacity: 1;
 }
 
 /* Skeuomorphism Button */
@@ -414,13 +398,11 @@ nav a:hover {
 .skeuomorphism-button {
     background: linear-gradient(145deg, #f8fafc, #e2e8f0);
     color: var(--text-dark);
-
+    border: 1px solid rgba(0,0,0,0.2);
     box-shadow:
         6px 6px 14px rgba(0,0,0,0.45),
         -3px -3px 8px rgba(255,255,255,0.7),
         inset 0 1px 2px rgba(255,255,255,0.8);
-
-    border: 1px solid rgba(0,0,0,0.2);
 }
 
 .skeuomorphism-button:hover {
@@ -441,13 +423,11 @@ nav a:hover {
 /* Footer */
 
 footer {
-    position: relative;
     width: 100%;
     height: 4rem;
-    z-index: 100;
     font-size: 1rem;
     text-align: right;
-    border-top: solid 1px var(--text-primary);
+    border-top: solid 1px var(--border-card-color);
 }
 
 footer .content {
@@ -474,8 +454,8 @@ footer .content {
         display: block;
         width: 100%;
         max-width: 220px;
-        text-align: center;
         padding: 0.6rem;
+        text-align: center;
     }
 
     .button-samples {
@@ -486,6 +466,10 @@ footer .content {
     .classic-button, .flat-button, .skeuomorphism-button {
         width: 100%;
         max-width: 320px;
+    }
+
+    footer {
+        text-align: center;
     }
 }
 
@@ -500,7 +484,7 @@ footer .content {
     }
 
     .color-palette, .font-samples, .text-style {
-        gap: 0.5rem;
+        gap: 0.75rem;
     }
 
     .button-samples {
@@ -508,8 +492,8 @@ footer .content {
     }
 
     .classic-button, .flat-button, .skeuomorphism-button {
-        font-size: 1rem;
         padding: 0.8rem 1rem;
+        font-size: 1rem;
         white-space: normal;
     }
 
