@@ -60,7 +60,7 @@ https://amirabenameur3.github.io/Website_Design_System/
 ## 📁 Project Structure
 
 ```
-Website_Design
+Website_Design_System
 │
 ├── index.html
 ├── README.md
