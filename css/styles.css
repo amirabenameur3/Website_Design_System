@@ -11,6 +11,8 @@
   --text-dark: #0f172a;
   --accent-color: #38bdf8;
   --border-card-color: rgba(255, 255, 255, 0.12);
+  --surface-card: rgba(255, 255, 255, 0.03);
+  --surface-section: rgba(255, 255, 255, 0.02);
   --color-palette1: #072260;
   --color-palette2: #DC143C;
   --color-palette3: #C5D86D;
@@ -28,16 +30,18 @@
 html {
     font-family: "Georgia", serif;
     font-size: 16px;
+    scroll-behavior: smooth;
 }
 
 body {
     background: linear-gradient(135deg, #0f172a, #1e293b);
     color: var(--text-primary);
     margin: 0;
+    line-height: 1.5;
 }
 
 .main-content {
-    padding: 0 1rem;
+    padding: 0 1rem 2rem;
 }
 
 /* Header */
@@ -59,9 +63,6 @@ header .content {
 
 header .main-title {
     flex: 1 1 260px;
-}
-
-header .main-title h1 {
     margin: 0;
     font-size: clamp(1.5rem, 2vw, 2rem);
 }
@@ -110,7 +111,7 @@ nav a:hover {
     padding: 1rem;
     border: 1px solid var(--border-card-color);
     border-radius: 0.5rem;
-    background-color: rgba(255, 255, 255, 0.02);
+    background-color: var(--surface-section);
     margin-top: 2rem;
 }
 
@@ -214,7 +215,7 @@ nav a:hover {
     text-align: left;
     line-height: 1.5;
     color: var(--text-primary);
-    background-color: rgba(255, 255, 255, 0.03);
+    background-color: var(--surface-card);
     border: 1px solid var(--border-card-color);
     border-radius: 0.5rem;
 }
@@ -237,47 +238,38 @@ nav a:hover {
 
 .inter, .inter a {
     font-family: 'Inter', sans-serif;
-    text-decoration: none;
 }
 
 .poppins, .poppins a {
     font-family: 'Poppins', sans-serif;
-    text-decoration: none;
 }
 
 .roboto, .roboto a {
     font-family: 'Roboto', sans-serif;
-    text-decoration: none;
 }
 
 .montserrat, .montserrat a {
     font-family: 'Montserrat', sans-serif;
-    text-decoration: none;
 }
 
 .merriweather, .merriweather a {
     font-family: 'Merriweather', serif;
-    text-decoration: none;
 }
 
 .fira-code, .fira-code a {
     font-family: 'Fira Code', monospace;
-    text-decoration: none;
 }   
 
 .playfair-display, .playfair-display a {
     font-family: 'Playfair Display', serif;
-    text-decoration: none;
 }
 
 .source-code-pro, .source-code-pro a {
     font-family: 'Source Code Pro', monospace;
-    text-decoration: none;
 }
 
 .nunito-sans, .nunito-sans a {
     font-family: 'Nunito Sans', sans-serif;
-    text-decoration: none;
 }
 
 /* Text Styles */
@@ -295,7 +287,7 @@ nav a:hover {
     text-align: left;
     line-height: 1.5;
     color: var(--text-primary);
-    background-color: rgba(255, 255, 255, 0.03);
+    background-color: var(--surface-card);
     border: 1px solid var(--border-card-color);
     border-radius: 0.5rem; 
 }
@@ -440,7 +432,7 @@ footer .content {
 
 @media (max-width: 600px) {
 
-    header .main-title h1 {
+    header .main-title {
         text-align: center;
     }
 
