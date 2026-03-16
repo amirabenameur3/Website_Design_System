@@ -1,59 +1,95 @@
-# Website Design System
+<p align="center">
+  <img src="./docs/Webpage_design_preview.png" width="900" alt="Website Design System preview">
+</p>
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-green?style=for-the-badge&logo=github)](https://amirabenameur3.github.io/Website_Design_System/)
+<h1 align="center">🎨 Website Design System</h1>
 
-![Webpage Design Preview](docs/Webpage_design_preview.png)
+<p align="center">
+  A reusable design system that showcases color palettes, typography styles, and UI components
+  to maintain consistent web design across projects.
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/HTML5-Structure-E34F26?logo=html5&logoColor=white">
+  <img src="https://img.shields.io/badge/CSS3-Styling-1572B6?logo=css3&logoColor=white">
+  <img src="https://img.shields.io/badge/Design-System-UI-purple">
+  <img src="https://img.shields.io/badge/Responsive-Design-38bdf8">
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/github/repo-size/amirabenameur3/Website_Design_System" alt="Repo Size">
+  <img src="https://img.shields.io/github/last-commit/amirabenameur3/Website_Design_System" alt="Last Commit">
+</p>
+
+<p align="center">
+  <a href="https://amirabenameur3.github.io/Website_Design_System/">
+  <img src="https://img.shields.io/badge/🌐-Live%20Demo-38bdf8?style=for-the-badge">
+  </a>
+</p>
 
 ---
 
-## 📸 Preview
+## 📖 Project Overview
 
-A personal **website style guide** showcasing reusable design elements including color palettes, typography, text styles, and button components.
+This project is a **website design system** created to define reusable design guidelines for web development.
 
-This project was built to practice creating a **consistent design system** for future web projects.
+It centralizes important visual elements such as:
 
----
+- Color palettes
+- Typography styles
+- UI components
+- Layout guidelines
 
-## 🌐 Live Demo
+The goal of the project is to build a **consistent visual foundation that can be reused across multiple websites and applications.**
 
-https://amirabenameur3.github.io/Website_Design_System/
-
----
-
-## 🛠 Technologies Used
-
-- HTML5  
-- CSS3  
-- CSS Variables  
-- Flexbox  
-- CSS Grid  
-- Responsive Design  
-- Google Fonts  
+Design systems are widely used in modern web development to **maintain visual consistency, improve development efficiency, and simplify UI design workflows.**
 
 ---
 
 ## ✨ Features
 
-- Color palette system with HEX, RGB, and HSL values  
-- Typography showcase with multiple web fonts  
-- Structured text style hierarchy (H1, H2, H3, paragraph)  
-- Button component examples:
-  - Classic button
-  - Flat button
-  - Skeuomorphic button  
-- Responsive layout for desktop, tablet, and mobile screens  
-- Dark UI theme
+- Organized **color palette system**
+- Defined **typography hierarchy**
+- Reusable **UI components**
+- Consistent **design guidelines**
+- Clean and readable layout
+- Responsive design
 
 ---
 
-## 💡 Skills Practiced
+# 🎨 Design Sections
 
-- Building a **design system**
-- Organizing reusable CSS components
-- Using **CSS variables for theme management**
-- Implementing **Flexbox and Grid layouts**
-- Creating **interactive UI elements**
-- Responsive design techniques
+The design system is structured into several sections:
+
+### Color Palette
+Defines the main colors used across the interface.
+
+### Typography
+Demonstrates font styles, sizes, and text hierarchy.
+
+### UI Components
+Reusable components such as buttons and cards.
+
+### Layout Guidelines
+Examples of spacing and visual structure.
+
+---
+
+## 🎬 Demo
+
+<p align="center">
+  <img src="./docs/demo.gif" width="900" alt="Website Design System demo">
+</p>
+
+---
+
+## 🧰 Technologies Used
+
+- **HTML5**
+- **CSS3**
+- **Flexbox**
+- **Responsive Design**
+- **Google Fonts**
 
 ---
 
@@ -64,12 +100,14 @@ Website_Design_System
 │
 ├── index.html
 ├── README.md
+├── design_system_favicon.ico
 │
 ├── css
 │   └── styles.css
 │
 └── docs
-    └── design-system-preview.png
+    ├── Webpage_design_preview.png
+    └── demo.gif
 ```
 
 ---
@@ -82,3 +120,9 @@ PhD researcher & Front-End development learner
 
 GitHub:  
 https://github.com/amirabenameur3
+
+---
+
+## ⭐ If you like the project
+
+Give the repository a **star on GitHub** ⭐
