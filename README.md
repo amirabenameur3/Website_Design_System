@@ -14,6 +14,8 @@
   <img src="https://img.shields.io/badge/CSS3-Styling-1572B6?logo=css3&logoColor=white">
   <img src="https://img.shields.io/badge/UI-Design_System-purple">
   <img src="https://img.shields.io/badge/Responsive-Design-38bdf8">
+  <img src="https://img.shields.io/badge/GitHub-Project-181717?logo=github">
+  <img src="https://img.shields.io/badge/Status-Portfolio%20Project-purple">
 </p>
 
 <p align="center">
