@@ -12,13 +12,13 @@
 <p align="center">
   <img src="https://img.shields.io/badge/HTML5-Structure-E34F26?logo=html5&logoColor=white">
   <img src="https://img.shields.io/badge/CSS3-Styling-1572B6?logo=css3&logoColor=white">
-  <img src="https://img.shields.io/badge/Design-System-UI-purple">
+  <img src="https://img.shields.io/badge/UI-Design_System-purple">
   <img src="https://img.shields.io/badge/Responsive-Design-38bdf8">
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/github/repo-size/amirabenameur3/Website_Design_System" alt="Repo Size">
-  <img src="https://img.shields.io/github/last-commit/amirabenameur3/Website_Design_System" alt="Last Commit">
+  <img src="https://img.shields.io/github/repo-size/amirabenameur3/Website_Design_System">
+  <img src="https://img.shields.io/github/last-commit/amirabenameur3/Website_Design_System">
 </p>
 
 <p align="center">
