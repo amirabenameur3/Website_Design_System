@@ -31,6 +31,10 @@
                     <li><a href="#fonts_section">Fonts</a></li>
                     <li><a href="#text_styles_section">Text Styles</a></li>
                     <li><a href="#buttons_section">Buttons</a></li>
+                    <li><a href="#tokens_section">Design Tokens</a></li>
+                    <li><a href="#components_section">Components</a></li>
+                    <li><a href="#accessibility_section">Accessibility</a></li>
+                    <li><a href="#theme_section">Theme System</a></li>
                 </ul>
             </nav>
         </div>
@@ -41,11 +45,8 @@
     <main class="main-content">
 
         <!--Colors-->
-
         <section class="design-section colors" id="colors_section">
-
             <h2>Colors</h2>
-
             <div class="color-palette">
                 <div class="design-card color-item dark-navy">
                     <h3>Deep Navy</h3>
@@ -130,18 +131,13 @@
                     <p>HSL: (0.02, 93%, 71%)</p>
                     <p>RGB: (250,128,114)</p>
                 </div> 
-
             </div>
         </section>
 
         <!--Fonts-->
-
         <section class="design-section fonts" id="fonts_section">
-
             <h2>Fonts</h2>
-
             <div class="font-samples">
-
                 <article class="design-card font-item inter">
                     <h3>Inter</h3>
                     <p>"To be, or not to be, that is the question" <span class="author"><a href="https://en.wikipedia.org/wiki/William_Shakespeare" title="link to William Shakespeare's Wikipedia page">William Shakespeare</a></span></p>
@@ -204,17 +200,13 @@
                     <p><strong>"To be, or not to be, that is the question"</strong> <span class="author"><a href="https://en.wikipedia.org/wiki/William_Shakespeare" title="link to William Shakespeare's Wikipedia page"><strong>William Shakespeare</strong></a></span></p>
                     <p><em>"To be, or not to be, that is the question"</em> <span class="author"><a href="https://en.wikipedia.org/wiki/William_Shakespeare" title="link to William Shakespeare's Wikipedia page"><em>William Shakespeare</em></a></span></p>
                 </article>
-
             </div>
         </section>
 
         <!--Text Styles-->
         <section class="design-section text-styles" id="text_styles_section">
-
             <h2>Text Styles</h2>
-            
             <div class="text-style">
-
                 <article class="design-card text-style-item heading1">
                     <h1>H1: Main heading</h1>
                     <ul>
@@ -250,27 +242,178 @@
                         <li>Font-family: Roboto</li>
                     </ul>
                 </article>
-
             </div>
         </section>
 
         <!--Buttons-->
-
         <section class="design-section buttons" id="buttons_section">
-
             <h2>Buttons</h2>
-
             <div class="button-samples">
                 <button class="button button-primary">Classic Button</button>
                 <button class="button button-outline"><span>Flat Button </span></button>
                 <button class="button button-skeuomorphic">Skeuomorphism Button</button>
             </div>
+        </section>
 
+        <!--Design Tokens-->
+        <section class="design-section tokens" id="tokens_section">
+            <h2>Design Tokens</h2>
+            <div class="content-grid token-grid">
+                <article class="design-card content-card token-card">
+                    <h3>Colors</h3>
+                    <p>Reusable color variables for backgrounds, text, accents, borders, and palette values.</p>
+                    <code>--bg-primary</code>
+                    <code>--text-primary</code>
+                    <code>--accent-primary</code>
+                </article>
+                
+                <article class="design-card content-card token-card">
+                    <h3>Typography</h3>
+                    <p>Font families, sizes, and weights used to keep text styling consistent.</p>
+                    <code>--font-primary</code>
+                    <code>--fs-md</code>
+                    <code>--fw-bold</code>
+                </article>
+                
+                <article class="design-card content-card token-card">
+                    <h3>Spacing</h3>
+                    <p>Consistent spacing scale for padding, margins, gaps, and layouts.</p>
+                    <code>--space-xs</code>
+                    <code>--space-sm</code>
+                    <code>--space-lg</code>
+                </article>
+                
+                <article class="design-card content-card token-card">
+                    <h3>Radius & Shadows</h3>
+                    <p>Reusable border radius and shadow values for cards, buttons, and surfaces.</p>
+                    <code>--radius-md</code>
+                    <code>--shadow-md</code>
+                    <code>--shadow-lg</code>
+                </article>
+            </div>
+        </section>
+
+        <!--Components-->
+        <section class="design-section components" id="components_section">
+            <h2>Components</h2>
+            <div class="content-grid component-grid">
+                <article class="design-card content-card component-card">
+                    <h3>Design Section</h3>
+                    <p>A reusable layout wrapper used for each major part of the style guide.</p>
+                    <code>.design-section</code>
+                </article>
+                
+                <article class="design-card content-card component-card">
+                    <h3>Design Card</h3>
+                    <p>A reusable card component for colors, typography samples, tokens, and examples.</p>
+                    <code>.design-card</code>
+                </article>
+                
+                <article class="design-card content-card component-card">
+                    <h3>Button System</h3>
+                    <p>A shared button base class with reusable visual variants.</p>
+                    <code>.button</code>
+                    <code>.button-primary</code>
+                    <code>.button-outline</code>
+                </article>
+                
+                <article class="design-card content-card component-card">
+                    <h3>Theme Toggle</h3>
+                    <p>A small interactive control that switches between light and dark mode.</p>
+                    <code>.theme-toggle</code>
+                </article>
+            </div>
+        </section>
+
+        <!--Accessibility-->
+        <section class="design-section accessibility" id="accessibility_section">
+            <h2>Accessibility</h2>
+            <div class="content-grid accessibility-grid">
+                <article class="design-card content-card accessibility-card">
+                    <h3>Semantic HTML</h3>
+                    <p>
+                        The project uses semantic elements such as
+                        <code>&lt;header&gt;</code>,
+                        <code>&lt;nav&gt;</code>,
+                        <code>&lt;main&gt;</code>,
+                        <code>&lt;section&gt;</code>,
+                        and <code>&lt;footer&gt;</code>
+                        to improve structure and screen reader support.
+                    </p>
+                </article>
+                
+                <article class="design-card content-card accessibility-card">
+                    <h3>Keyboard Navigation</h3>
+                    <p>
+                        Interactive elements such as navigation links and theme toggle buttons
+                        are fully keyboard accessible and preserve visible focus states.
+                    </p>
+                </article>
+                
+                <article class="design-card content-card accessibility-card">
+                    <h3>Color Contrast</h3>
+                    <p>
+                        The color palette was designed to maintain readable contrast ratios
+                        across both light and dark themes.
+                    </p>
+                </article>
+                
+                <article class="design-card content-card accessibility-card">
+                    <h3>Responsive Design</h3>
+                    <p>
+                        Flexible layouts, responsive grids, and scalable spacing tokens
+                        ensure the interface remains usable across multiple screen sizes.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!--Theme System-->
+        <section class="design-section theme-system" id="theme_section">
+            <h2>Theme System</h2>
+            <div class="content-grid theme-grid">
+                <article class="design-card content-card theme-card">
+                    <h3>Light & Dark Mode</h3>
+                    <p>
+                        The interface supports dynamic light and dark themes using
+                        CSS custom properties and data attributes.
+                    </p>
+                    <code>[data-theme="light"]</code>
+                    <code>[data-theme="dark"]</code>
+                </article>
+                
+                <article class="design-card content-card theme-card">
+                    <h3>Persistent Preferences</h3>
+                    <p>
+                        The selected theme is stored using localStorage so the user's
+                        preference remains active after refreshing the page.
+                    </p>
+                    <code>localStorage.setItem()</code>
+                </article>
+                
+                <article class="design-card content-card theme-card">
+                    <h3>Reusable Tokens</h3>
+                    <p>
+                        Backgrounds, text colors, borders, and surfaces automatically
+                        adapt through reusable design tokens.
+                    </p>
+                    <code>--bg-primary</code>
+                    <code>--text-primary</code>
+                </article>
+                
+                <article class="design-card content-card theme-card">
+                    <h3>Interactive Toggle</h3>
+                    <p>
+                        A reusable theme toggle button dynamically updates the interface
+                        and switches icons using Lucide icons.
+                    </p>
+                    <code>.theme-toggle</code>
+                </article>
+            </div>
         </section>
     </main>
     
     <!--Footer-->
-    
     <footer>
         <div class="content">
             <span class="copyright">Made with ❤️ by Amira</span>
