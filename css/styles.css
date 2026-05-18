@@ -200,7 +200,7 @@ nav a:hover {
 
 /* Shared Section Styles */
 
-.colors, .fonts, .text-styles, .buttons {
+.design-section {
     display: flex;
     flex-direction: column;
     padding: var(--space-sm);
@@ -210,9 +210,15 @@ nav a:hover {
     margin-top: var(--space-lg);
 }
 
-.colors h2, .fonts h2, .text-styles h2, .buttons h2 {
+.design-section h2 {
     margin: var(--space-sm);
     color: var(--text-primary);
+}
+
+.design-card {
+    padding: var(--space-sm);
+    border: 1px solid var(--border-primary);
+    border-radius: var(--radius-md);
 }
 
 /* Color section */
@@ -226,9 +232,6 @@ nav a:hover {
 
 .color-item {
     min-height: 170px;
-    padding: var(--space-sm);
-    border: 1px solid var(--border-primary);
-    border-radius: var(--radius-md);
     text-align: center;
     color: var(--text-primary);
 }
@@ -306,13 +309,10 @@ nav a:hover {
 
 .font-item {
     min-height: 170px;
-    padding: var(--space-sm);
     text-align: left;
     line-height: 1.5;
     color: var(--text-primary);
     background-color: var(--bg-card);
-    border: 1px solid var(--border-primary);
-    border-radius: var(--radius-md);
 }
 
 .font-item h3 {
@@ -378,13 +378,10 @@ nav a:hover {
 
 .text-style-item {
     min-height: 170px;
-    padding: var(--space-sm);
     text-align: left;
     line-height: 1.5;
     color: var(--text-primary);
     background-color: var(--bg-card);
-    border: 1px solid var(--border-primary);
-    border-radius: var(--radius-md);
 }
 
 .text-style-item ul {
@@ -412,7 +409,7 @@ nav a:hover {
     margin: var(--space-lg) 0;
 }
 
-.classic-button, .flat-button, .skeuomorphism-button {
+.button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -434,13 +431,13 @@ nav a:hover {
 
 /* Classic Button */
 
-.classic-button {
+.button-primary {
     background-color: var(--accent-primary);
     color: var(--text-dark);
     border: none;
 }
 
-.classic-button:hover {
+.button-primary:hover {
     background-color: var(--accent-hover);
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
@@ -448,25 +445,25 @@ nav a:hover {
 
 /* Flat Button */
 
-.flat-button {
+.button-outline {
     background-color: transparent;
     color: var(--text-primary);
     border: 1px solid var(--border-primary);
 }
 
-.flat-button:hover {
+.button-outline:hover {
     background-color: var(--bg-hover);
     color: var(--accent-primary);
     transform: translateY(-2px);
 }
 
-.flat-button span {
+.button-outline span {
     position: relative;
     display: inline-block;
     transition: transform var(--transition-fast);
 }
 
-.flat-button span:after {
+.button-outline span:after {
     content: "\00bb";
     position: absolute;
     right: -1.25rem;
@@ -475,18 +472,18 @@ nav a:hover {
                 right var(--transition-fast);
 }
 
-.flat-button:hover span {
+.button-outline:hover span {
   transform: translateX(-0.2rem);
 }
 
-.flat-button:hover span:after {
+.button-outline:hover span:after {
     right: -1rem;
     opacity: 1;
 }
 
 /* Skeuomorphism Button */
 
-.skeuomorphism-button {
+.button-skeuomorphic {
     background: linear-gradient(145deg, var(--button-light-start), var(--button-light-end));
     color: var(--text-dark);
     border: 1px solid var(--border-dark);
@@ -496,7 +493,7 @@ nav a:hover {
         inset 0 1px 2px rgba(255,255,255,0.8);
 }
 
-.skeuomorphism-button:hover {
+.button-skeuomorphic:hover {
     transform: translateY(-2px);
     box-shadow:
         8px 8px 18px rgba(0,0,0,0.5),
@@ -504,7 +501,7 @@ nav a:hover {
         inset 0 1px 2px rgba(255,255,255,0.9);
 }
 
-.skeuomorphism-button:active {
+.button-skeuomorphic:active {
     transform: translateY(1px);
     box-shadow:
         inset 4px 4px 8px rgba(0,0,0,0.4),
