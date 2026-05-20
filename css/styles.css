@@ -585,6 +585,13 @@ header .main-title {
     background-color: var(--color-salmon);
 }
 
+/* Force readable text on dark color cards */
+.color-palette .color-item.dark-navy,
+.color-palette .color-item.dark-navy h3,
+.color-palette .color-item.dark-navy p {
+    color: var(--text-on-accent) !important;
+}
+
 /* =========================
    FONTS & TEXT STYLES
 ========================= */
