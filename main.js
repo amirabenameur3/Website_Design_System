@@ -280,7 +280,8 @@ if (componentSearchInput) {
 
             const isMatch = cardTitle.includes(searchValue);
 
-            card.style.display = isMatch ? "block" : "none";
+            card.classList.toggle("hidden", !isMatch);
         });
     });
+
 }

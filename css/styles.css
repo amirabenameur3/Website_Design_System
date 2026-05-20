@@ -834,6 +834,10 @@ textarea.form-control {
     overflow: visible;
 }
 
+.feedback-card.hidden {
+    display: none;
+}
+
 .feedback-card:has(.tooltip-wrapper), .feedback-card:has(#openModalButton),
 .feedback-card:has(#showToastButton), .feedback-card:has(.loading-spinner) {
     justify-content: flex-start;
