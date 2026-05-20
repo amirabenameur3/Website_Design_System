@@ -21,27 +21,39 @@
     <!--Header-->
     <header>
         <div class="content">
-            <h1 class="main-title">My Website Style Guide</h1>
-            <button id="themeToggle" class="theme-toggle" type="button" aria-label="Switch color theme">
-                <i data-lucide="sun"></i>
-            </button>
-            <nav class="nav-bar" aria-label="Main navigation">
-                <ul>
-                    <li><a href="#colors_section">Colors</a></li>
-                    <li><a href="#fonts_section">Fonts</a></li>
-                    <li><a href="#text_styles_section">Text Styles</a></li>
-                    <li><a href="#buttons_section">Buttons</a></li>
-                    <li><a href="#tokens_section">Design Tokens</a></li>
-                    <li><a href="#components_section">Components</a></li>
-                    <li><a href="#forms_section">Forms</a></li>
-                    <li><a href="#feedback_section">Feedback UI</a></li>
-                    <li><a href="#navigation_section">Navigation</a></li>
-                    <li><a href="#layout_section">Layout</a></li>
-                    <li><a href="#accessibility_section">Accessibility</a></li>
-                    <li><a href="#theme_section">Theme System</a></li>
-                </ul>
-            </nav>
+            <div class="logo" aria-label="Website logo">
+                <img src="/css/images/logo.png" alt="Design System Logo">
+                <h1 class="main-title">My Website Style Guide</h1>
+            </div>
+
+            <div class="header-actions">
+                <button id="themeToggle" class="theme-toggle" type="button" aria-label="Switch color theme">
+                    <i data-lucide="sun"></i>
+                </button>
+                <button id="menuButton" class="menu-button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navMenu">
+                    <span class="menu-line"></span>
+                    <span class="menu-line"></span>
+                    <span class="menu-line"></span>
+                </button>
+            </div>
         </div>
+
+        <nav id="navMenu" class="nav-menu" aria-label="Main navigation">
+            <ul>
+                <li><a href="#colors_section"><i data-lucide="palette"></i>Colors</a></li>
+                <li><a href="#fonts_section"><i data-lucide="type"></i>Fonts</a></li>
+                <li><a href="#text_styles_section"><i data-lucide="text-cursor-input"></i>Text Styles</a></li>
+                <li><a href="#buttons_section"><i data-lucide="mouse-pointer-click"></i>Buttons</a></li>
+                <li><a href="#tokens_section"><i data-lucide="zap"></i>Design Tokens</a></li>
+                <li><a href="#components_section"><i data-lucide="layers-3"></i>Components</a></li>
+                <li><a href="#forms_section"><i data-lucide="square-pen"></i>Forms</a></li>
+                <li><a href="#feedback_section"><i data-lucide="message-circle-more"></i>Feedback UI</a></li>
+                <li><a href="#navigation_section"><i data-lucide="navigation"></i>Navigation</a></li>
+                <li><a href="#layout_section"><i data-lucide="layout-panel-top"></i>Layout</a></li>
+                <li><a href="#accessibility_section"><i data-lucide="accessibility"></i>Accessibility</a></li>
+                <li><a href="#theme_section"><i data-lucide="moon-star"></i>Theme System</a></li>
+            </ul>
+        </nav>
     </header>
 
     <!--Category Filter-->
@@ -500,9 +512,9 @@
                                 <span>Button Example</span>
                                 <button class="copy-button" type="button">Copy</button>
                             </div>
-                            <pre><code>&lt;button class="button button-primary"&gt;
+                            <pre><code><span class="code-tag">&lt;button</span> <span class="code-attr">class</span>=<span class="code-string">"button button-primary"</span><span class="code-tag">&gt;</span>
     Primary Button
-&lt;/button&gt;</code></pre>
+<span class="code-tag">&lt;/button&gt;</span></code></pre>
                         </div>
                     </div>
                 </article>
