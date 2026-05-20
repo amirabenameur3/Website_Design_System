@@ -1391,12 +1391,15 @@ textarea.form-control {
 }
 
 .code-example code {
-    color: #d1d5db;
+    color: #e2e8f0;
     line-height: 1.7;
 }
 
 .code-example pre {
+    padding: var(--space-sm);
     border-radius: var(--radius-sm);
+    background-color: #0f172a;
+    overflow-x: auto;
 }
 
 .code-tag {
