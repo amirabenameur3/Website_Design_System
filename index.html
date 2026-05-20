@@ -33,6 +33,10 @@
                     <li><a href="#buttons_section">Buttons</a></li>
                     <li><a href="#tokens_section">Design Tokens</a></li>
                     <li><a href="#components_section">Components</a></li>
+                    <li><a href="#forms_section">Forms</a></li>
+                    <li><a href="#feedback_section">Feedback UI</a></li>
+                    <li><a href="#navigation_section">Navigation</a></li>
+                    <li><a href="#layout_section">Layout</a></li>
                     <li><a href="#accessibility_section">Accessibility</a></li>
                     <li><a href="#theme_section">Theme System</a></li>
                 </ul>
@@ -321,6 +325,343 @@
                     <h3>Theme Toggle</h3>
                     <p>A small interactive control that switches between light and dark mode.</p>
                     <code>.theme-toggle</code>
+                </article>
+            </div>
+        </section>
+
+        <!--Forms-->
+        <section class="design-section forms" id="forms_section">
+            <h2>Forms</h2>
+            <div class="content-grid form-grid">
+                <article class="design-card content-card form-card">
+                    <h3>Text Inputs</h3>
+                    <label for="nameInput">Name</label>
+                    <input type="text" id="nameInput" class="form-control" placeholder="Enter your name">
+                    <p class="helper-text">Use clear labels and helpful placeholder text.</p>
+                </article>
+                
+                <article class="design-card content-card form-card">
+                    <h3>Textarea</h3>
+                    <label for="messageInput">Message</label>
+                    <textarea id="messageInput" class="form-control" rows="4" placeholder="Write your message"></textarea>
+                    <p class="helper-text">Useful for longer user input.</p>
+                </article>
+                
+                <article class="design-card content-card form-card">
+                    <h3>Select Menu</h3>
+                    <label for="categorySelect">Category</label>
+                    <select id="categorySelect" class="form-control">
+                        <option>Choose a category</option>
+                        <option>Design Tokens</option>
+                        <option>Components</option>
+                        <option>Accessibility</option>
+                    </select>
+                    <p class="helper-text">Select menus help users choose from predefined options.</p>
+                </article>
+                
+                <article class="design-card content-card form-card">
+                    <h3>Validation States</h3>
+                    <label for="emailInput">Email</label>
+                    <input type="email" id="emailInput" class="form-control input-error" value="wrong-email">
+                    <p class="error-text">Please enter a valid email address.</p>
+                    <label for="successInput">Username</label>
+                    <input type="text" id="successInput" class="form-control input-success" value="Amira">
+                    <p class="success-text">Username is available.</p>
+                </article>
+                
+                <article class="design-card content-card form-card">
+                    <h3>Checkbox</h3>
+                    <label class="choice-control">
+                        <input type="checkbox" checked>
+                        <span>I agree to the terms</span>
+                    </label>
+                </article>
+                
+                <article class="design-card content-card form-card">
+                    <h3>Radio Buttons</h3>
+                    <label class="choice-control">
+                        <input type="radio" name="themeChoice" checked>
+                        <span>Light theme</span>
+                    </label>
+                    <label class="choice-control">
+                        <input type="radio" name="themeChoice">
+                        <span>Dark theme</span>
+                    </label>
+                </article>
+            </div>
+        </section>
+
+        <!--Feedback UI-->
+        <section class="design-section feedback" id="feedback_section">
+            <h2>Feedback UI</h2>
+
+            <!--Search bar-->
+            <div class="component-search">
+                <label for="componentSearch">Search components</label>
+                <div class="search-wrapper">
+                    <i data-lucide="search" class="search-icon"></i>
+                    <input type="search" id="componentSearch" placeholder="Search components...">
+                </div>
+            </div>
+
+            <!--Components cards-->
+            <div class="content-grid feedback-grid">
+                <!-- alert card -->
+                <article class="design-card content-card feedback-card">
+                    <h3>Alerts</h3>
+                    <div class="alert alert-success">
+                        Success! Your changes were saved successfully.
+                    </div>
+                    <div class="alert alert-warning">
+                        Warning! Please review your input fields.
+                    </div>
+                    <div class="alert alert-error">
+                        Error! Something went wrong while submitting the form.
+                    </div>
+                </article>
+
+                <!-- badge card -->
+                <article class="design-card content-card feedback-card">
+                    <h3>Badges</h3>
+                    <div class="badge-group">
+                        <span class="badge badge-primary">Primary</span>
+                        <span class="badge badge-success">Success</span>
+                        <span class="badge badge-warning">Warning</span>
+                        <span class="badge badge-error">Error</span>
+                    </div>
+                </article>
+
+                <!-- tooltip card -->
+                <article class="design-card content-card feedback-card">
+                    <h3>Tooltip</h3>
+                    <div class="tooltip-wrapper">
+                        <button class="button button-outline tooltip-button">
+                            Hover Me
+                        </button>
+                        <span class="tooltip">
+                            This is a custom tooltip component.
+                        </span>
+                    </div>
+                </article>
+                
+                <!-- loading card -->
+                <article class="design-card content-card feedback-card">
+                    <h3>Loading State</h3>
+                    <div class="loading-spinner"></div>
+                    <p>Loading components and asynchronous content.</p>
+                </article>
+
+                 <!-- modal card -->
+                <article class="design-card content-card feedback-card">
+                    <h3>Modal Component</h3>
+                    <button class="button button-primary" id="openModalButton">
+                        Open Modal
+                    </button>
+                </article>
+
+                <!-- toast card -->
+                <article class="design-card content-card feedback-card">
+                    <h3>Toast Notification</h3>
+                    <button class="button button-primary" id="showToastButton">
+                        Show Toast
+                    </button>
+                </article>
+
+                <!-- copy to clipboard card -->
+                <article class="design-card content-card feedback-card">
+                    <h3>Copy to Clipboard</h3>
+                    <div class="preview-tabs">
+                        <button class="preview-tab active" data-view="preview">Preview</button>
+                        <button class="preview-tab" data-view="code">Code</button>
+                    </div>
+
+                    <!-- Preview -->
+                    <div class="preview-content active">
+                        <button class="button button-primary">Primary Button</button>
+                    </div>
+                    
+                    <!-- Code -->
+                    <div class="code-content" hidden>
+                        <div class="code-example">
+                            <div class="code-header">
+                                <span>Button Example</span>
+                                <button class="copy-button" type="button">Copy</button>
+                            </div>
+                            <pre><code>&lt;button class="button button-primary"&gt;
+    Primary Button
+&lt;/button&gt;</code></pre>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!--Modal-->
+            <div class="modal-overlay" id="modalOverlay">
+                <div class="modal">
+                    <button class="modal-close" id="closeModalButton" aria-label="Close modal">
+                        ✕
+                    </button>
+                    <h3>Design System Modal</h3>
+                    <p>
+                        This modal component demonstrates overlays,
+                        transitions, layering, and interactive UI behavior.
+                    </p>
+                    <button class="button button-outline" id="modalActionButton">
+                        Confirm
+                    </button>
+                </div>
+            </div>
+
+            <!--Toast-->
+            <div class="toast" id="toast">
+                <span>Success! Your action was completed.</span>
+                <button class="toast-close" id="closeToastButton" aria-label="Close toast">
+                    ×
+                </button>
+            </div>
+        </section>
+
+        <!--Navigation-->
+        <section class="design-section navigation" id="navigation_section">
+            <h2>Navigation Components</h2>
+            <div class="content-grid navigation-grid">
+                <!-- Breadcrumbs -->
+                <article class="design-card content-card navigation-card">
+                    <h3>Breadcrumbs</h3>
+                    <nav class="breadcrumbs" aria-label="Breadcrumb">
+                        <a href="#">Home</a>
+                        <span>/</span>
+                        <a href="#">Components</a>
+                        <span>/</span>
+                        <span aria-current="page">Navigation</span>
+                    </nav>
+                </article>
+                
+                <!-- Tabs -->
+                <article class="design-card content-card navigation-card">
+                    <h3>Tabs</h3>
+                    <div class="tabs" role="tablist" aria-label="Component information tabs">
+                        <button class="tab-button active" type="button" role="tab" aria-selected="true" data-tab="overview">
+                            Overview
+                        </button>
+                        <button class="tab-button" type="button" role="tab" aria-selected="false" data-tab="components">
+                            Components
+                        </button>
+                        <button class="tab-button" type="button" role="tab" aria-selected="false" data-tab="accessibility">
+                            Accessibility
+                        </button>
+                    </div>
+                    
+                    <div class="tab-content active" id="overview">
+                        <p>Tabs organize related content into clear sections.</p>
+                    </div>
+                    <div class="tab-content" id="components">
+                        <p>Components can use tabs to separate examples, code, and usage notes.</p>
+                    </div>
+                    <div class="tab-content" id="accessibility">
+                        <p>Accessible tabs use roles, selected states, and keyboard-friendly buttons.</p>
+                    </div>
+                </article>
+                
+                <!-- Pagination -->
+                <article class="design-card content-card navigation-card">
+                    <h3>Pagination</h3>
+                    <div class="pagination">
+                        <button class="pagination-button">←</button>
+                        <button class="pagination-button active">1</button>
+                        <button class="pagination-button">2</button>
+                        <button class="pagination-button">3</button>
+                        <button class="pagination-button">→</button>
+                    </div>
+                </article>
+                
+                <!-- Navbar Preview -->
+                <article class="design-card content-card navigation-card">
+                    <h3>Navbar Preview</h3>
+                    <nav class="mini-navbar">
+                        <a href="#">Home</a>
+                        <a href="#">Tokens</a>
+                        <a href="#">Components</a>
+                    </nav>
+                </article>
+
+                <!--Accordion-->
+                <article class="design-card content-card navigation-card">
+                    <h3>Accordion</h3>
+                    <div class="accordion">
+                        <button class="accordion-header" type="button" aria-expanded="false">
+                            What is a design token?
+                            <span class="accordion-icon"><i data-lucide="plus"></i></span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Design tokens store reusable values such as colors, spacing, typography, and shadows.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion">
+                        <button class="accordion-header" type="button" aria-expanded="false">
+                            Why use reusable components?
+                            <span class="accordion-icon"><i data-lucide="plus"></i></span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Reusable components reduce repetition and make the interface easier to maintain.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!--Dropdown-->
+                <article class="design-card content-card dropdown-card">
+                    <h3>Dropdown Menu</h3>
+                    <div class="dropdown" data-dropdown>
+                        <button class="button button-secondary dropdown-toggle" type="button" aria-expanded="false" aria-haspopup="true">
+                            Options
+                            <i data-lucide="chevron-down"></i>
+                        </button>
+                        <ul class="dropdown-menu" hidden>
+                            <li><a href="#">Profile</a></li>
+                            <li><a href="#">Settings</a></li>
+                            <li><a href="#">Notifications</a></li>
+                            <li><a href="#">Log out</a></li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!--Layout-->
+        <section class="design-section layout" id="layout_section">
+            <h2>Layout Components</h2>
+            <div class="content-grid layout-grid">
+                <article class="design-card content-card layout-card">
+                    <h3>Containers</h3>
+                    <div class="container-preview container-sm">Small Container</div>
+                    <div class="container-preview container-md">Medium Container</div>
+                    <div class="container-preview container-lg">Large Container</div>
+                </article>
+                
+                <article class="design-card content-card layout-card">
+                    <h3>Responsive Grid</h3>
+                    <div class="layout-demo-grid">
+                        <div>Grid Item</div>
+                        <div>Grid Item</div>
+                        <div>Grid Item</div>
+                    </div>
+                </article>
+                
+                <article class="design-card content-card layout-card">
+                    <h3>Card Layout</h3>
+                    <div class="layout-demo-card">
+                        <h4>Reusable Card</h4>
+                        <p>Cards organize related content inside a flexible surface.</p>
+                    </div>
+                </article>
+                
+                <article class="design-card content-card layout-card">
+                    <h3>Spacing Scale</h3>
+                    <div class="spacing-preview spacing-xs">XS</div>
+                    <div class="spacing-preview spacing-sm">SM</div>
+                    <div class="spacing-preview spacing-md">MD</div>
+                    <div class="spacing-preview spacing-lg">LG</div>
                 </article>
             </div>
         </section>
