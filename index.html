@@ -44,12 +44,25 @@
         </div>
     </header>
 
-    <!--Main Content-->
+    <!--Category Filter-->
+    <div class="global-category-filter" aria-label="Filter style guide sections">
+        <button class="category-button active" type="button" data-category="all">All</button>
+        <button class="category-button" type="button" data-category="foundation">Foundation</button>
+        <button class="category-button" type="button" data-category="tokens">Tokens</button>
+        <button class="category-button" type="button" data-category="components">Components</button>
+        <button class="category-button" type="button" data-category="forms">Forms</button>
+        <button class="category-button" type="button" data-category="feedback">Feedback</button>
+        <button class="category-button" type="button" data-category="navigation">Navigation</button>
+        <button class="category-button" type="button" data-category="layout">Layout</button>
+        <button class="category-button" type="button" data-category="accessibility">Accessibility</button>
+        <button class="category-button" type="button" data-category="theme">Theme</button>
+    </div>
 
+    <!--Main Content-->
     <main class="main-content">
 
-        <!--Colors-->
-        <section class="design-section colors" id="colors_section">
+        <!--Colors Section-->
+        <section class="design-section colors" id="colors_section" data-category="foundation">
             <h2>Colors</h2>
             <div class="color-palette">
                 <div class="design-card color-item dark-navy">
@@ -138,8 +151,8 @@
             </div>
         </section>
 
-        <!--Fonts-->
-        <section class="design-section fonts" id="fonts_section">
+        <!--Fonts Section-->
+        <section class="design-section fonts" id="fonts_section" data-category="foundation">
             <h2>Fonts</h2>
             <div class="font-samples">
                 <article class="design-card font-item inter">
@@ -208,7 +221,7 @@
         </section>
 
         <!--Text Styles-->
-        <section class="design-section text-styles" id="text_styles_section">
+        <section class="design-section text-styles" id="text_styles_section" data-category="foundation">
             <h2>Text Styles</h2>
             <div class="text-style">
                 <article class="design-card text-style-item heading1">
@@ -249,8 +262,8 @@
             </div>
         </section>
 
-        <!--Buttons-->
-        <section class="design-section buttons" id="buttons_section">
+        <!--Buttons Section-->
+        <section class="design-section buttons" id="buttons_section" data-category="foundation">
             <h2>Buttons</h2>
             <div class="button-samples">
                 <button class="button button-primary">Classic Button</button>
@@ -260,7 +273,7 @@
         </section>
 
         <!--Design Tokens-->
-        <section class="design-section tokens" id="tokens_section">
+        <section class="design-section tokens" id="tokens_section" data-category="tokens">
             <h2>Design Tokens</h2>
             <div class="content-grid token-grid">
                 <article class="design-card content-card token-card">
@@ -298,7 +311,7 @@
         </section>
 
         <!--Components-->
-        <section class="design-section components" id="components_section">
+        <section class="design-section components" id="components_section" data-category="components">
             <h2>Components</h2>
             <div class="content-grid component-grid">
                 <article class="design-card content-card component-card">
@@ -329,8 +342,8 @@
             </div>
         </section>
 
-        <!--Forms-->
-        <section class="design-section forms" id="forms_section">
+        <!--Forms Section-->
+        <section class="design-section forms" id="forms_section" data-category="forms">
             <h2>Forms</h2>
             <div class="content-grid form-grid">
                 <article class="design-card content-card form-card">
@@ -391,8 +404,8 @@
             </div>
         </section>
 
-        <!--Feedback UI-->
-        <section class="design-section feedback" id="feedback_section">
+        <!--Feedback UI Section-->
+        <section class="design-section feedback" id="feedback_section" data-category="feedback">
             <h2>Feedback UI</h2>
 
             <!--Search bar-->
@@ -521,8 +534,8 @@
             </div>
         </section>
 
-        <!--Navigation-->
-        <section class="design-section navigation" id="navigation_section">
+        <!--Navigation Section-->
+        <section class="design-section navigation" id="navigation_section" data-category="navigation">
             <h2>Navigation Components</h2>
             <div class="content-grid navigation-grid">
                 <!-- Breadcrumbs -->
@@ -628,8 +641,8 @@
             </div>
         </section>
 
-        <!--Layout-->
-        <section class="design-section layout" id="layout_section">
+        <!--Layout Section-->
+        <section class="design-section layout" id="layout_section" data-category="layout">
             <h2>Layout Components</h2>
             <div class="content-grid layout-grid">
                 <article class="design-card content-card layout-card">
@@ -666,8 +679,8 @@
             </div>
         </section>
 
-        <!--Accessibility-->
-        <section class="design-section accessibility" id="accessibility_section">
+        <!--Accessibility Section-->
+        <section class="design-section accessibility" id="accessibility_section" data-category="accessibility">
             <h2>Accessibility</h2>
             <div class="content-grid accessibility-grid">
                 <article class="design-card content-card accessibility-card">
@@ -709,8 +722,8 @@
             </div>
         </section>
 
-        <!--Theme System-->
-        <section class="design-section theme-system" id="theme_section">
+        <!--Theme System Section-->
+        <section class="design-section theme-system" id="theme_section" data-category="theme">
             <h2>Theme System</h2>
             <div class="content-grid theme-grid">
                 <article class="design-card content-card theme-card">

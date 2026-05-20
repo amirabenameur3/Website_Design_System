@@ -167,6 +167,9 @@ html {
 }
 
 body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     background: linear-gradient(135deg, var(--bg-primary), var(--bg-secondary));
     color: var(--text-primary);
     margin: 0;
@@ -183,6 +186,7 @@ body, .design-section, .design-card, .button, nav a, .theme-toggle {
 
 .main-content {
     padding: 0 var(--space-sm) var(--space-lg);
+    flex: 1;
 }
 
 /* =========================
@@ -274,7 +278,69 @@ nav a:hover {
     transform: translateY(-1px);
 }
 
-/* Main Content */
+/* ============================
+   GLOBAL CATEGORY FILTER 
+============================= */
+
+.global-category-filter {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    padding: 0.85rem var(--space-lg);
+    margin-bottom: var(--space-lg);
+    border-bottom: 1px solid var(--border-primary);
+    background-color: rgba(15, 23, 42, 0.85);
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
+
+    overflow-x: auto;
+    flex-wrap: nowrap;
+}
+
+.global-category-filter::-webkit-scrollbar {
+    display: none;
+}
+
+.category-button {
+    padding: 0.65rem 1rem;
+    border: 1px solid var(--border-primary);
+    border-radius: 999px;
+    background-color: var(--bg-card);
+    color: var(--text-primary);
+    font-size: var(--fs-sm);
+    cursor: pointer;
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.category-button:hover {
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+    transform: translateY(-2px);
+}
+
+.category-button:active {
+    transform: translateY(0);
+}
+
+.category-button.active {
+    background-color: var(--accent-primary);
+    border-color: var(--accent-primary);
+    color: white;
+    box-shadow: 0 4px 14px rgba(59, 130, 246, 0.25);
+    transform: translateY(-2px);
+}
+
+/* ============================
+   MAIN CONTENT
+============================= */
 
 /* ============================
    SHARED COMPONENT STYLES

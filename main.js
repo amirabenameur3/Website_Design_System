@@ -7,31 +7,34 @@ lucide.createIcons();
 // =========================
 // DOM ELEMENTS
 // =========================
-
+// Theme Toggle Elements
 const themeToggleButton = document.getElementById('themeToggle');
 const savedTheme = localStorage.getItem("theme");
-
+// Modal Elements
 const modalOverlay = document.getElementById('modalOverlay');
 const openModalButton = document.getElementById('openModalButton');
 const closeModalButton = document.getElementById('closeModalButton');
-
+// Toast Elements
 const showToastButton = document.getElementById('showToastButton');
 const toast = document.getElementById('toast');
 const closeToastButton = document.getElementById('closeToastButton');
-
+// Tab Elements
 const tabButtons = document.querySelectorAll('.tab-button');
 const tabContents = document.querySelectorAll('.tab-content');
-
+// Accordion Elements
 const accordions = document.querySelectorAll('.accordion');
-
+// Dropdown Elements
 const dropdowns = document.querySelectorAll('[data-dropdown]');
-
+// Copy to Clipboard Elements
 const copyButtons = document.querySelectorAll(".copy-button");
-
+// Component Search Elements
 const componentSearchInput = document.getElementById("componentSearch");
 const feedbackCards = document.querySelectorAll(".feedback-card");
-
+// Preview / Code Toggle Elements
 const previewTabs = document.querySelectorAll(".preview-tab");
+// Global Category Filter Elements
+const categoryButtons = document.querySelectorAll(".category-button");
+const designSections = document.querySelectorAll(".design-section");
 
 // =========================
 // THEME TOGGLE
@@ -285,3 +288,27 @@ if (componentSearchInput) {
     });
 
 }
+
+// =========================
+// GLOBAL CATEGORY FILTER
+// =========================
+
+categoryButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+        const selectedCategory = button.dataset.category;
+
+        categoryButtons.forEach((button) => {
+            button.classList.remove("active");
+        });
+
+        button.classList.add("active");
+
+        designSections.forEach((section) => {
+            const sectionCategory = section.dataset.category;
+
+            const shouldShow = selectedCategory === "all" || sectionCategory === selectedCategory;
+
+            section.style.display = shouldShow ? "block" : "none";
+        });
+    });
+});
