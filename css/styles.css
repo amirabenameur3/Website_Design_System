@@ -1560,8 +1560,8 @@ textarea.form-control {
 .mini-navbar {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: var(--space-sm);
+    justify-content: center;
+    gap: var(--space-xs);
     width: 100%;
     padding: var(--space-sm);
     border: 1px solid var(--border-primary);
@@ -1570,13 +1570,15 @@ textarea.form-control {
 }
 
 .mini-navbar a {
-    flex: 1;
-    padding: var(--space-xs) var(--space-sm);
+    flex: 0 1 auto;
+    min-width: 0;
+    padding: var(--space-xs) 0.75rem;
     border-radius: var(--radius-sm);
     color: var(--text-secondary);
     text-align: center;
     text-decoration: none;
-    font-size: var(--fs-sm);
+    font-size: var(--fs-xs);
+    white-space: nowrap;
     transition:
         color var(--transition-fast),
         background-color var(--transition-fast),
