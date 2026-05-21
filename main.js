@@ -39,6 +39,8 @@ const componentSearchInput = document.getElementById("componentSearch");
 const feedbackCards = document.querySelectorAll(".feedback-card");
 // Preview / Code Toggle Elements
 const previewTabs = document.querySelectorAll(".preview-tab");
+const previewTabGroups = document.querySelectorAll(".preview-tabs");
+const deviceGroups = document.querySelectorAll(".preview-devices");
 // Global Category Filter Elements
 const categoryButtons = document.querySelectorAll(".category-button");
 const designSections = document.querySelectorAll(".design-section");
@@ -74,6 +76,54 @@ if (menuButton && navMenu) {
         } else {
             openMenu();
         }
+    });
+
+    // =========================
+    // KEYBOARD SUPPORT
+    // =========================
+
+    menuButton.addEventListener("keydown", (event) => {
+        const firstLink = navLinks[0];
+        const lastLink = navLinks[navLinks.length - 1];
+
+        if (event.key === "ArrowDown" || event.key === "ArrowUp") {
+            event.preventDefault();
+
+            openMenu();
+
+            if (event.key === "ArrowDown") {
+                firstLink.focus();
+            }
+
+            if (event.key === "ArrowUp") {
+                lastLink.focus();
+            }
+        }
+    });
+
+    navLinks.forEach((link, index) => {
+        link.addEventListener("click", closeMenu);
+
+        link.addEventListener("keydown", (event) => {
+            const firstLink = navLinks[0];
+            const lastLink = navLinks[navLinks.length - 1];
+
+            if (event.key === "ArrowDown") {
+                event.preventDefault();
+                const next = navLinks[index + 1] || firstLink;
+                next.focus();
+            }
+
+            if (event.key === "ArrowUp") {
+                event.preventDefault();
+                const prev = navLinks[index - 1] || lastLink;
+                prev.focus();
+            }
+
+            if (event.key === "Tab") {
+                closeMenu();
+            }
+        });
     });
 
     navLinks.forEach((link) => {
@@ -178,7 +228,7 @@ closeToastButton.addEventListener('click', closeToast);
 // INTERACTIVE TABS
 // =========================
 
-tabButtons.forEach((button) => {
+tabButtons.forEach((button, index) => {
     button.addEventListener('click', () => {
         const selectedTab = button.dataset.tab;
 
@@ -195,6 +245,41 @@ tabButtons.forEach((button) => {
         button.setAttribute('aria-selected', 'true');
 
         document.getElementById(selectedTab).classList.add('active');
+    });
+
+    // =========================
+    // TABS KEYBOARD NAVIGATION
+    // =========================
+
+    button.addEventListener('keydown', (event) => {
+        let targetIndex = index;
+
+        if (event.key === 'ArrowRight') {
+            event.preventDefault();
+
+            targetIndex = (index + 1) % tabButtons.length;
+        }
+
+        if (event.key === 'ArrowLeft') {
+            event.preventDefault();
+
+            targetIndex = (index - 1 + tabButtons.length) % tabButtons.length;
+        }
+
+        if (event.key === 'Home') {
+            event.preventDefault();
+
+            targetIndex = 0;
+        }
+
+        if (event.key === 'End') {
+            event.preventDefault();
+
+            targetIndex = tabButtons.length - 1;
+        }
+
+        tabButtons[targetIndex].focus();
+        tabButtons[targetIndex].click();
     });
 });
 
@@ -219,8 +304,10 @@ accordions.forEach((accordion) => {
 dropdowns.forEach((dropdown) => {
     const toggleButton = dropdown.querySelector('.dropdown-toggle');
     const menu = dropdown.querySelector('.dropdown-menu');
-
+    
     if (!toggleButton || !menu) return;
+    const menuLinks = menu.querySelectorAll('a');
+
 
     toggleButton.addEventListener('click', () => {
         const isOpen = dropdown.classList.contains('open');
@@ -234,6 +321,56 @@ dropdowns.forEach((dropdown) => {
 
             menu.hidden = false;
         }
+    });
+
+    // =========================
+    // DROPDOWN KEYBOARD SUPPORT
+    // =========================
+
+    toggleButton.addEventListener("keydown", (event) => {
+        const firstLink = menuLinks[0];
+        const lastLink = menuLinks[menuLinks.length - 1];
+        
+        if (event.key === "ArrowDown" || event.key === "ArrowUp") {
+            event.preventDefault();
+            
+            closeAllDropdowns();
+            
+            dropdown.classList.add("open");
+            toggleButton.setAttribute("aria-expanded", "true");
+            menu.hidden = false;
+            
+            if (event.key === "ArrowDown") {
+                firstLink.focus();
+            }
+            
+            if (event.key === "ArrowUp") {
+                lastLink.focus();
+            }
+        }
+    });
+
+    menuLinks.forEach((link, index) => {
+        link.addEventListener("keydown", (event) => {
+            const firstLink = menuLinks[0];
+            const lastLink = menuLinks[menuLinks.length - 1];
+
+            if (event.key === "ArrowDown") {
+                event.preventDefault();
+                const next = menuLinks[index + 1] || firstLink;
+                next.focus();
+            }
+
+            if (event.key === "ArrowUp") {
+                event.preventDefault();
+                const prev = menuLinks[index - 1] || lastLink;
+                prev.focus();
+            }
+
+            if (event.key === "Tab") {
+                closeAllDropdowns();
+            }
+        });
     });
 });
 
@@ -297,9 +434,87 @@ previewTabs.forEach((tab) => {
     });
 });
 
-// ==============================
+// ===================================
+// PREVIEW TABS KEYBOARD NAVIGATION
+// ===================================
+
+previewTabGroups.forEach((group) => {
+    const tabs = group.querySelectorAll(".preview-tab");
+
+    tabs.forEach((tab, index) => {
+        tab.addEventListener("keydown", (event) => {
+            let targetIndex = index;
+
+            if (event.key === "ArrowRight") {
+                event.preventDefault();
+
+                targetIndex = (index + 1) % tabs.length;
+            }
+
+            if (event.key === "ArrowLeft") {
+                event.preventDefault();
+
+                targetIndex = (index - 1 + tabs.length) % tabs.length;
+            }
+
+            if (event.key === "Home") {
+                event.preventDefault();
+
+                targetIndex = 0;
+            }
+
+            if (event.key === "End") {
+                event.preventDefault();
+
+                targetIndex = tabs.length - 1;
+            }
+
+            tabs[targetIndex].focus();
+            tabs[targetIndex].click();
+        });
+    });
+});
+
+// =====================================
+// DEVICE BUTTONS KEYBOARD NAVIGATION
+// =====================================
+
+deviceGroups.forEach((group) => {
+    const buttons = group.querySelectorAll(".device-button");
+
+    buttons.forEach((button, index) => {
+        button.addEventListener("keydown", (event) => {
+            let targetIndex = index;
+
+            if (event.key === "ArrowRight") {
+                event.preventDefault();
+                targetIndex = (index + 1) % buttons.length;
+            }
+
+            if (event.key === "ArrowLeft") {
+                event.preventDefault();
+                targetIndex = (index - 1 + buttons.length) % buttons.length;
+            }
+
+            if (event.key === "Home") {
+                event.preventDefault();
+                targetIndex = 0;
+            }
+
+            if (event.key === "End") {
+                event.preventDefault();
+                targetIndex = buttons.length - 1;
+            }
+
+            buttons[targetIndex].focus();
+            buttons[targetIndex].click();
+        });
+    });
+});
+
+// =================================
 // RESPONSIVE PREVIEW PLAYGROUND
-// ==============================
+// =================================
 
 deviceButtons.forEach((button) => {
     button.addEventListener("click", () => {
@@ -396,3 +611,39 @@ categoryButtons.forEach((button) => {
     });
 });
 
+// =====================================
+// CATEGORY FILTER KEYBOARD NAVIGATION
+// =====================================
+
+categoryButtons.forEach((button, index) => {
+    button.addEventListener("keydown", (event) => {
+        let targetIndex = index;
+
+        if (event.key === "ArrowRight") {
+            event.preventDefault();
+
+            targetIndex = (index + 1) % categoryButtons.length;
+        }
+
+        if (event.key === "ArrowLeft") {
+            event.preventDefault();
+
+            targetIndex = (index - 1 + categoryButtons.length) % categoryButtons.length;
+        }
+
+        if (event.key === "Home") {
+            event.preventDefault();
+
+            targetIndex = 0;
+        }
+
+        if (event.key === "End") {
+            event.preventDefault();
+
+            targetIndex = categoryButtons.length - 1;
+        }
+
+        categoryButtons[targetIndex].focus();
+        categoryButtons[targetIndex].click();
+    });
+});
