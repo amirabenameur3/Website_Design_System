@@ -470,6 +470,26 @@ header .main-title {
     border-color: var(--accent-primary);
 }
 
+/* =========================
+   Animations
+========================= */
+
+.design-section {
+    animation: sectionFadeIn var(--transition-fast);
+}
+
+@keyframes sectionFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* Design Tokens, Components, Accessibility and Theme */
 
 .content-grid {
