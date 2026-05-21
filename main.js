@@ -30,6 +30,8 @@ const tabContents = document.querySelectorAll('.tab-content');
 const accordions = document.querySelectorAll('.accordion');
 // Dropdown Elements
 const dropdowns = document.querySelectorAll('[data-dropdown]');
+// Responsive preview Elements
+const deviceButtons = document.querySelectorAll(".device-button");
 // Copy to Clipboard Elements
 const copyButtons = document.querySelectorAll(".copy-button");
 // Component Search Elements
@@ -295,6 +297,29 @@ previewTabs.forEach((tab) => {
     });
 });
 
+// ==============================
+// RESPONSIVE PREVIEW PLAYGROUND
+// ==============================
+
+deviceButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+        const card = button.closest(".feedback-card");
+        const buttons = card.querySelectorAll(".device-button");
+        const previewFrame = card.querySelector(".preview-frame");
+
+        const selectedDevice = button.dataset.device;
+
+        buttons.forEach((button) => {
+            button.classList.remove("active");
+        });
+
+        button.classList.add("active");
+
+        previewFrame.classList.remove("desktop", "tablet", "mobile");
+        previewFrame.classList.add(selectedDevice);
+    });
+});
+
 // =========================
 // COPY TO CLIPBOARD
 // =========================
@@ -370,3 +395,4 @@ categoryButtons.forEach((button) => {
         });
     });
 });
+

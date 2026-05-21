@@ -1338,16 +1338,97 @@ textarea.form-control {
     color: white;
 }
 
+/* Responsive Preview Playground */
+
+.preview-devices {
+    display: flex;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-sm);
+}
+
+.device-button {
+    padding: 0.4rem 0.75rem;
+    border: 1px solid var(--border-primary);
+    border-radius: var(--radius-sm);
+    background-color: transparent;
+    color: var(--text-secondary);
+    font-size: var(--fs-xs);
+    cursor: pointer;
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.device-button:hover {
+    background-color: var(--bg-hover);
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+}
+
+.device-button:active {
+    transform: scale(0.97);
+}
+
+.device-button.active {
+    background-color: var(--accent-primary);
+    border-color: var(--accent-primary);
+    color: white;
+}
+
 .preview-content {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: var(--space-sm);
+}
+
+.preview-frame {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     min-height: 120px;
+    margin: 0 auto;
     padding: var(--space-md);
     border: 1px solid var(--border-primary);
     border-radius: var(--radius-md);
     background-color: var(--bg-hover);
+    transition:
+        width 0.3s ease,
+        min-height 0.3s ease;
 }
+
+.preview-frame .button {
+    white-space: nowrap;
+    max-width: 100%;
+}
+
+/* Desktop */
+
+.preview-frame.desktop {
+    max-width: var(--container-lg);
+}
+
+/* Tablet */
+
+.preview-frame.tablet {
+    max-width: var(--container-sm);
+}
+
+/* Mobile */
+
+.preview-frame.mobile {
+    max-width: 160px;
+}
+
+.preview-frame.mobile .button {
+    width: auto;
+    min-width: unset;
+    padding: 0.65rem 0.8rem;
+    font-size: var(--fs-xs);
+}
+
+/* Code content */
 
 .code-content {
     margin-top: var(--space-sm);
@@ -1389,6 +1470,8 @@ textarea.form-control {
     color: var(--accent-primary);
     transform: translateY(-1px);
 }
+
+/* Syntax Highlighting */
 
 .code-example code {
     color: #e2e8f0;
