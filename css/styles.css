@@ -1764,7 +1764,6 @@ textarea.form-control {
 }
 
 .dropdown-card {
-    min-height: 350px;
     overflow: visible;
 }
 
@@ -1803,12 +1802,14 @@ textarea.form-control {
 }
 
 .dropdown.open .dropdown-toggle {
-    background-color: var(--bg-hover);
+    background-color: var(--bg-card);
+    color: var(--text-primary);
     border-color: var(--accent-primary);
     box-shadow: var(--shadow-sm);
 }
 
 .dropdown.open .dropdown-toggle i {
+    color: var(--text-primary);
     transform: rotate(180deg);
 }
 
@@ -1826,7 +1827,8 @@ textarea.form-control {
     background-color: var(--bg-card);
     box-shadow: var(--shadow-md);
     opacity: 0;
-    transform: translateY(-10px);
+    transform: translateY(-6px) scale(0.98);
+    transform-origin: top left;
     transition: opacity 0.2s ease, transform 0.2s ease;
     pointer-events: none;
 }
@@ -1856,6 +1858,10 @@ textarea.form-control {
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;
+}
+
+.dropdown-card:has(.dropdown.open) {
+    padding-bottom: calc(var(--space-lg) + 200px);
 }
 
 /* =========================
