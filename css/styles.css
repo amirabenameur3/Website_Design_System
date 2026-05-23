@@ -381,7 +381,7 @@ header .main-title {
     padding: var(--space-sm) var(--space-lg);
     margin-bottom: var(--space-lg);
     border-bottom: 1px solid var(--border-primary);
-    background-color: var(--bg-primary);
+    background-color: var(--bg-primary); /* fallback */
     background-color: color-mix(in srgb, var(--bg-primary) 88%, transparent);
     -webkit-backdrop-filter: blur(14px);
     backdrop-filter: blur(14px);
@@ -1749,7 +1749,7 @@ textarea.form-control {
 }
 
 .accordion.active .accordion-content {
-    max-height: 160px;
+    max-height: 300px;
     padding: var(--space-sm);
 }
 
@@ -2375,11 +2375,11 @@ footer .content {
         width: 70%;
     }
 
-    .layout-card .container-preview.container-preview.container-md {
+    .layout-card .container-preview.container-md {
         width: 85%;
     }
 
-    .layout-card .container-preview.container-preview.container-lg {
+    .layout-card .container-preview.container-lg {
         width: 100%;
     }
 
