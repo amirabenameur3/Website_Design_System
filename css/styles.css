@@ -1618,7 +1618,8 @@ textarea.form-control {
 }
 
 .navigation-card:has(.pagination) .pagination {
-    margin-top: 2.5rem;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .pagination {
