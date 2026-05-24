@@ -5,75 +5,147 @@
 <h1 align="center">🎨 Website Design System</h1>
 
 <p align="center">
-  A reusable design system that showcases color palettes, typography styles, and UI components
-  to maintain consistent web design across projects.
+  A reusable and responsive front-end design system built to demonstrate modern UI architecture, 
+  interactive components, accessibility practices, and scalable design tokens.
 </p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/HTML5-Structure-E34F26?logo=html5&logoColor=white">
   <img src="https://img.shields.io/badge/CSS3-Styling-1572B6?logo=css3&logoColor=white">
-  <img src="https://img.shields.io/badge/UI-Design_System-purple">
+  <img src="https://img.shields.io/badge/JavaScript-Interactivity-F7DF1E?logo=javascript&logoColor=black">
   <img src="https://img.shields.io/badge/Responsive-Design-38bdf8">
-  <img src="https://img.shields.io/badge/GitHub-Project-181717?logo=github">
+  <img src="https://img.shields.io/badge/Theme-Dark%2FLight-black">
+  <img src="https://img.shields.io/badge/Accessibility-ARIA-green">
+  <img src="https://img.shields.io/badge/UI-Design_System-purple">
+  <img src="https://img.shields.io/badge/Keyboard-Navigation-green">
   <img src="https://img.shields.io/badge/Status-Portfolio%20Project-purple">
 </p>
 
 <p align="center">
   <img src="https://img.shields.io/github/repo-size/amirabenameur3/Website_Design_System">
   <img src="https://img.shields.io/github/last-commit/amirabenameur3/Website_Design_System">
+  <img src="https://img.shields.io/github/languages/count/amirabenameur3/Website_Design_System">
 </p>
 
 <p align="center">
   <a href="https://amirabenameur3.github.io/Website_Design_System/">
-  <img src="https://img.shields.io/badge/🌐-Live%20Demo-38bdf8?style=for-the-badge">
+    <img src="https://img.shields.io/badge/🌐-Live%20Demo-38bdf8?style=for-the-badge">
   </a>
 </p>
 
 ---
 
-## 📖 Project Overview
+# 📖 Project Overview
 
-This project is a **website design system** created to define reusable design guidelines for web development.
+This project is a fully responsive **Website Design System** created to centralize reusable UI patterns, design tokens, typography rules, layout systems, and interactive front-end components.
 
-It centralizes important visual elements such as:
+The goal of the project is to build a scalable visual foundation that can be reused across multiple web applications while maintaining:
 
-- Color palettes
-- Typography styles
-- UI components
-- Layout guidelines
+- Visual consistency
+- Responsive behavior
+- Accessibility standards
+- Component reusability
+- Cleaner front-end architecture
 
-The goal of the project is to build a **consistent visual foundation that can be reused across multiple websites and applications.**
-
-Design systems are widely used in modern web development to **maintain visual consistency, improve development efficiency, and simplify UI design workflows.**
-
----
-
-## ✨ Features
-
-- Organized **color palette system**
-- Defined **typography hierarchy**
-- Reusable **UI components**
-- Consistent **design guidelines**
-- Clean and readable layout
-- Responsive design
+The project evolved from a static style guide into a more advanced interactive front-end system featuring reusable UI components, JavaScript interactivity, accessibility enhancements, responsive navigation, theme switching, filtering systems, and modern layout patterns.
 
 ---
 
-# 🎨 Design Sections
+# 🌟 Project Highlights
 
-The design system is structured into several sections:
+- Built a fully responsive and reusable front-end design system
+- Implemented dark / light theme switching using CSS variables and JavaScript
+- Created reusable UI components with scalable architecture
+- Added interactive JavaScript features including tabs, accordions, dropdowns, and toast notifications
+- Improved accessibility using semantic HTML, ARIA attributes, and keyboard navigation
+- Designed responsive layouts for desktop, tablet, mobile, and very small screens
+- Integrated live search and category filtering systems
+- Practiced modular CSS organization using design tokens and reusable utility classes
+- Used Git branching strategies and version control workflows throughout development
+- Deployed the project using GitHub Pages
 
-### Color Palette
-Defines the main colors used across the interface.
+---
 
-### Typography
-Demonstrates font styles, sizes, and text hierarchy.
+## 🌐 Live Demo
 
-### UI Components
-Reusable components such as buttons and cards.
+You can explore the live version of the website here:
 
-### Layout Guidelines
-Examples of spacing and visual structure.
+👉 https://amirabenameur3.github.io/Website_Design_System/
+
+Deployed with **GitHub Pages**
+
+---
+
+# ✨ Features
+
+## 🎨 Design Tokens
+
+- Reusable CSS custom properties
+- Color system
+- Typography scale
+- Spacing system
+- Border radius tokens
+- Shadow system
+
+---
+
+## 🧩 UI Components
+
+- Buttons
+- Cards
+- Alerts
+- Toast notifications
+- Tabs
+- Accordions
+- Dropdown menus
+- Tooltips
+- Navigation components
+- Search interface
+- Layout cards
+
+---
+
+## ⚡ Interactive Features
+
+- Dark / Light theme toggle
+- Live component search
+- Responsive mobile navigation
+- Accordion functionality
+- Interactive tabs
+- Dropdown menus
+- Category filtering system
+- Toast notification system
+- Keyboard accessibility support
+- Lucide icon integration
+
+---
+
+## ♿ Accessibility Features
+
+- ARIA attributes
+- Keyboard navigation
+- Focus-visible states
+- Accessible interactive controls
+- Semantic HTML structure
+- Improved mobile usability
+
+---
+
+## 📱 Responsive Design
+
+The project is fully responsive across:
+
+- Desktop
+- Tablet
+- Mobile devices
+- Very small screens
+
+Responsive layouts were implemented using:
+
+- Flexbox
+- CSS Grid
+- Media queries
+- Adaptive spacing and typography
 
 ---
 
@@ -85,13 +157,34 @@ Examples of spacing and visual structure.
 
 ---
 
+# 🧠 What I Learned
+
+Through this project, I practiced and improved:
+
+- Building reusable UI systems
+- Organizing scalable CSS architecture
+- Creating interactive JavaScript components
+- Improving accessibility
+- Responsive web design
+- Component-based thinking
+- Git & GitHub workflow management
+- Front-end debugging and refactoring
+
+---
+
 ## 🧰 Technologies Used
 
 - **HTML5**
 - **CSS3**
+- **JavaScript (ES6)**
 - **Flexbox**
-- **Responsive Design**
+- **CSS Grid**
+- **CSS Variables**
+- **Responsive Web Design**
 - **Google Fonts**
+- **Lucide Icons**
+- **Git & GitHub**
+- **GitHub Pages**
 
 ---
 
@@ -101,6 +194,7 @@ Examples of spacing and visual structure.
 Website_Design_System
 │
 ├── index.html
+├── main.js
 ├── README.md
 ├── design_system_favicon.ico
 │
@@ -114,17 +208,55 @@ Website_Design_System
 
 ---
 
+# 🚀 Future Improvements
+
+- Component documentation system
+- Copy-to-clipboard snippets
+- Animation system
+- Additional form components
+- React version of the design system
+- Component preview playground
+- Exportable design tokens
+
+---
+
+# 🧩 Challenges & Solutions
+
+## Challenge:
+Creating reusable and scalable UI sections while maintaining visual consistency.
+
+## Solution:
+Implemented reusable utility classes, CSS variables, and modular component structures.
+
+---
+
+## Challenge:
+Improving mobile responsiveness across many interactive sections.
+
+## Solution:
+Used responsive Flexbox/Grid layouts and multiple media query breakpoints for adaptive behavior.
+
+---
+
+## Challenge:
+Making interactive components accessible.
+
+## Solution:
+Added keyboard navigation support, ARIA attributes, semantic HTML, and focus management improvements.
+
+---
+
 ## 👩‍💻 Author
 
 **Amira Ben Ameur**
 
-PhD researcher & Front-End development learner  
+PhD Researcher & Front-End Development Learner
 
 GitHub:  
 https://github.com/amirabenameur3
 
 ---
 
-## ⭐ If you like the project
+# ⭐ Support
 
-Give the repository a **star on GitHub** ⭐
+If you like this project, consider giving it a **star on GitHub** ⭐
